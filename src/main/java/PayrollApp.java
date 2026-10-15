@@ -6,18 +6,20 @@ public class PayrollApp {
 
         Scanner empScanner = new Scanner(System.in);
 
-        System.out.println("Enter your name.");
+        System.out.print("Enter your name: ");
         String name = empScanner.nextLine();
 
-        System.out.println("Enter your hours worked.");
-        Float hoursWorked = empScanner.nextFloat();
+        System.out.print("Enter your hours worked: ");
+        double hoursWorked = empScanner.nextDouble();
 
-        System.out.println("Enter your hourly pay rate.");
-        Float hourlyPay = empScanner.nextFloat();
+        System.out.print("Enter your hourly pay rate: ");
+        double hourlyPay = empScanner.nextDouble();
 
-        Float grossPay = hoursWorked * hourlyPay;
+        double grossPay = hoursWorked * hourlyPay;
 
         System.out.println("Hello " + name + "! Your gross pay for this period is $" + grossPay + ".");
+
+        empScanner.close();
 
 
     }
